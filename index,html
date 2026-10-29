@@ -57,7 +57,7 @@ footer{
     <h2>🔴 EN VIVO</h2>
 
     <audio controls>
-        <source src="#" type="audio/mpeg">
+        #
         Tu navegador no soporta audio HTML5.
     </audio>
 
