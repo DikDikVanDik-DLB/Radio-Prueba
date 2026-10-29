@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Online</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            background: #1e293b;
+            padding: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .container {
+            padding: 40px 20px;
+        }
+
+        .live {
+            color: red;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+
+        audio {
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .card {
+            background: #1e293b;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #1e293b;
+            padding: 20px;
+        }
+
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🎙️ Radio DikDik FM</h1>
+        <p>Transmitiendo las 24 horas</p>
+    </header>
+
+    <div class="container">
+
+        <div class="live">
+            🔴 EN VIVO
+        </div>
+
+        <audio controls>
+            <source src="https://TU_SERVIDOR:8000/live" type="audio/mpeg">
+            Tu navegador no soporta audio HTML5.
+        </audio>
+
+        <div class="card">
+            <h2>📻 Bienvenidos</h2>
+            <p>
+                Radio online con programación musical, noticias,
+                entrevistas y contenido en vivo.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>🗓 Programación</h2>
+
+            <p>08:00 - Noticias</p>
+            <p>10:00 - Música Variada</p>
+            <p>14:00 - Entrevistas</p>
+            <p>18:00 - Actualidad</p>
+            <p>20:00 - Música Nocturna</p>
+        </div>
+
+        <div class="card">
+            <h2>📞 Contacto</h2>
+            <p>Email: contacto@tudominio.com</p>
+            <p>WhatsApp: +54 9 XX XXXX XXXX</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Radio DikDik FM</p>
+    </footer>
+
+</body>
+
+</html>
