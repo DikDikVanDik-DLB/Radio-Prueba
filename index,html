@@ -3,43 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Radio DikDik FM</title>
 
 <style>
-body{
+*{
     margin:0;
-    font-family:Arial,sans-serif;
-    background:#0f172a;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
     color:white;
-    text-align:center;
 }
 
 header{
-    background:#1e293b;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.logo{
+    font-size:4rem;
+}
+
+h1{
+    margin-top:15px;
+    font-size:3rem;
+}
+
+.subtitle{
+    color:#cbd5e1;
+    margin-top:10px;
+}
+
+.live{
+    margin-top:20px;
+    color:#ef4444;
+    font-weight:bold;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%{opacity:1;}
+    50%{opacity:.4;}
+    100%{opacity:1;}
+}
+
+.player{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
     padding:30px;
 }
 
-.container{
+.player-card{
+    background:#1e293b;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+audio{
+    width:100%;
+    margin-top:20px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#10b981;
+    color:white;
+    padding:15px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#059669;
+}
+
+.content{
+    max-width:1200px;
+    margin:auto;
     padding:40px 20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
 }
 
 .card{
     background:#1e293b;
-    max-width:800px;
-    margin:20px auto;
-    padding:20px;
-    border-radius:10px;
+    padding:25px;
+    border-radius:15px;
 }
 
-audio{
-    width:80%;
-    max-width:600px;
+.card h2{
+    margin-bottom:15px;
+    color:#22c55e;
+}
+
+.card p{
+    line-height:1.6;
+}
+
+.schedule p{
+    margin-bottom:10px;
 }
 
 footer{
-    background:#1e293b;
-    padding:20px;
-    margin-top:40px;
+    margin-top:50px;
+    text-align:center;
+    padding:30px;
+    background:#111827;
+}
+
+.social{
+    margin-top:20px;
+}
+
+.social a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-size:1.1rem;
+}
+
+.status{
+    color:#22c55e;
+    margin-top:15px;
+}
+
+.hero{
+    background:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1500&q=80');
+    background-size:cover;
+    background-position:center;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(15,23,42,.8);
+}
+
+.hero-content{
+    position:relative;
+    z-index:1;
 }
 </style>
 
@@ -47,39 +161,88 @@ footer{
 
 <body>
 
+<section class="hero">
+
+<div class="hero-content">
+
 <header>
-    <h1>🎙️ Radio DikDik FM</h1>
-    <p>Transmitiendo las 24 horas</p>
+
+<div class="logo">🎙️</div>
+
+<h1>Radio DikDik FM</h1>
+
+<p class="subtitle">
+Música • Noticias • Entrevistas • Podcasts
+</p>
+
+<div class="live">
+🔴 TRANSMISIÓN EN VIVO
+</div>
+
 </header>
 
-<div class="container">
+<div class="player">
 
-    <h2>🔴 EN VIVO</h2>
+<div class="player-card">
 
-    <audio controls>
-        #
-        Tu navegador no soporta audio HTML5.
-    </audio>
+<h2>Escuchanos Ahora</h2>
 
-    <div class="card">
-        <h2>📻 Bienvenidos</h2>
-        <p>Radio online en construcción.</p>
-    </div>
+<audio controls>
+<source src="https://TU_STREAMING_AQUI/live" type="audio/mpeg">
+Tu navegador no soporta audio HTML5.
+</audio>
 
-    <div class="card">
-        <h2>🗓 Programación</h2>
-        <p>08:00 - Noticias</p>
-        <p>10:00 - Música Variada</p>
-        <p>14:00 - Entrevistas</p>
-        <p>18:00 - Actualidad</p>
-        <p>20:00 - Música Nocturna</p>
-    </div>
+<div class="status">
+✅ Sistema listo para transmitir
+</div>
+
+<a href="#" class="btn">
+▶ Escuchar Radio
+</a>
 
 </div>
 
-<footer>
-    © 2026 Radio DikDik FM
-</footer>
+</div>
 
-</body>
-</html>
+</div>
+
+</section>
+
+<section class="content">
+
+<div class="card">
+
+<h2>📻 Sobre la Radio</h2>
+
+<p>
+Bienvenidos a Radio DikDik FM. Un espacio dedicado a la música,
+la información y el entretenimiento con programación durante
+todo el día.
+</p>
+
+</div>
+
+<div class="card schedule">
+
+<h2>🗓 Programación</h2>
+
+<p>08:00 - Noticias Matinales</p>
+<p>10:00 - Música Variada</p>
+<p>12:00 - Informativo Central</p>
+<p>14:00 - Entrevistas</p>
+<p>18:00 - Actualidad y Tecnología</p>
+<p>20:00 - Música Nocturna</p>
+
+</div>
+
+<div class="card">
+
+<h2>📱 Contacto</h2>
+
+<p>WhatsApp: +54 9 XX XXXX XXXX</p>
+
+<p>Email: contacto@radiodikdik.com</p>
+
+<p>Instagram: @radiodikdik</p>
+
+<p>Facebook: Radio Dik
